@@ -1,0 +1,80 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1504603816227'); /* IE9*/
+  src: url('iconfont.eot?t=1504603816227#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.ttf?t=1504603816227') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1504603816227#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size: 1.4rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-equipment:before { content: "\e632"; }
+
+.icon-sports:before { content: "\ea2f"; }
+
+.icon-order:before { content: "\e615"; }
+
+.icon-collection:before { content: "\e60f"; }
+
+.icon-down:before { content: "\e62d"; }
+
+.icon-matches:before { content: "\e606"; }
+
+.icon-search:before { content: "\e63e"; }
+
+.icon-closebtn:before { content: "\e6c0"; }
+
+.icon-medal:before { content: "\e6ad"; }
+
+.icon-average-speed:before { content: "\e62a"; }
+
+.icon-doubleup:before { content: "\e604"; }
+
+.icon-trainPlan:before { content: "\e608"; }
+
+.icon-grade:before { content: "\e60b"; }
+
+.icon-menu:before { content: "\e607"; }
+
+.icon-goods:before { content: "\e614"; }
+
+.icon-calendar:before { content: "\e675"; }
+
+.icon-coupon:before { content: "\e64e"; }
+
+.icon-bean:before { content: "\e60c"; }
+
+.icon-chat:before { content: "\e643"; }
+
+.icon-sport:before { content: "\e68d"; }
+
+.icon-rank:before { content: "\e605"; }
+
+.icon-total-time:before { content: "\e601"; }
+
+.icon-packet:before { content: "\e609"; }
+
+.icon-club-copy-copy:before { content: "\e985"; }
+
+.icon-mime:before { content: "\e60a"; }
+
+.icon-setting:before { content: "\e63b"; }
+
+.icon-history_run:before { content: "\e602"; }
+
+.icon-code:before { content: "\e603"; }
+
+.icon-sportTeam:before { content: "\e73c"; }
+
+.icon-find:before { content: "\e600"; }
+
+.icon-RMB:before { content: "\e671"; }
+
+.icon-logo:before { content: "\e7e0"; }
+

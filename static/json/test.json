@@ -1,0 +1,88 @@
+{
+    "sport_run": {
+        "sportMiles": "232.1", 
+        "sportType": "跑步总公里", 
+        "sportRecommend": "快来看看你的跑姿得几分"
+    }, 
+    "sport_walk": {
+        "sportMiles": "0", 
+        "sportType": "健走总公里", 
+        "sportRecommend": "快来看看你的跑姿得几分"
+    }, 
+    "sport_cycle": {
+        "sportMiles": "0", 
+        "sportType": "骑行总公里", 
+        "sportRecommend": "快来看看你的跑姿得几分"
+    }, 
+    "recommend": [
+        [
+            {
+                "recommendImgUrl": "mls2.jpg", 
+                "tit": "2027年北京国际马拉松", 
+                "matchName": "线上比赛", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "same2.jpg", 
+                "tit": "2027年北京女子半程马拉松", 
+                "matchName": "同城赛事", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "train2.jpg", 
+                "tit": "超燃脂训练", 
+                "matchName": "训练计划", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }
+        ], 
+        [
+            {
+                "recommendImgUrl": "mls3.jpg", 
+                "tit": "2027年北京国际马拉松", 
+                "matchName": "线上比赛", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "same3.jpg", 
+                "tit": "2027年北京女子半程马拉松", 
+                "matchName": "同城赛事", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "train3.jpg", 
+                "tit": "超燃脂训练", 
+                "matchName": "训练计划", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }
+        ], 
+        [
+            {
+                "recommendImgUrl": "mls1.jpg", 
+                "tit": "2017年北京国际马拉松", 
+                "matchName": "线上比赛", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "same1.jpg", 
+                "tit": "2017年北京女子半程马拉松", 
+                "matchName": "同城赛事", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }, 
+            {
+                "recommendImgUrl": "train1.jpg", 
+                "tit": "超燃脂训练", 
+                "matchName": "训练计划", 
+                "matchAddress": "奥森公园", 
+                "recommendShow": true
+            }
+        ]
+    ]
+}
