@@ -67,11 +67,11 @@
 <style type="text/css">
     .history-head {
         position: fixed;
-        height: 120px;
+        height: 40px;
         width: 100%;
         color: #111;
-        font-size: 40px;
-        line-height: 120px;
+        font-size: 20px;
+        line-height: 40px;
         text-align: center;
         background-color: #fff;
         z-index: 999;

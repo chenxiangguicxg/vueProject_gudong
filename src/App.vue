@@ -9,7 +9,7 @@
 
 <script> 
 import swiper from '../static/swiper.min.js';
-import { adapt } from './assets/js/rootFontsize.js';
+import { adapt } from './assets/js/rootFontsize.js'; 
 import mFooter from './components/public/footer.vue';
 export default {
   name: 'app',

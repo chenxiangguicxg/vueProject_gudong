@@ -21,14 +21,17 @@
                 sportRecommend: '',
             }
          },
-         mounted: function() {
+        mounted: function() {
             let axios = require('axios')
             axios.get('static/json/test.json')
             .then((res) => {
                 this.sportMiles = res.data.sport_run.sportMiles;
                 this.sportRecommend = res.data.sport_run.sportRecommend;
             })
-         }
+            .catch((res) => {
+                console.log(error)
+            });
+        }
     }
 </script>
 

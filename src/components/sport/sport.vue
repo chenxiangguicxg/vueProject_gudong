@@ -6,7 +6,7 @@
             </div>
             <router-link :to="{path:'/sport/calculateSteps'}" class="s-steps">
                 <span>今日步数</span>
-                <em id="steps">36</em>
+                <em id="steps">37776</em>
                 <i class="el-icon-arrow-right"></i>
             </router-link>
         </div>

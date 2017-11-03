@@ -6,7 +6,7 @@
     }, 
     "sport_walk": {
         "sportMiles": "0", 
-        "sportType": "健走总公里", 
+        "sportType": "健走总公里",  
         "sportRecommend": "快来看看你的跑姿得几分"
     }, 
     "sport_cycle": {
@@ -84,5 +84,39 @@
                 "recommendShow": true
             }
         ]
-    ]
+    ],
+    "sportsCarouelImages": [
+        {"url": "../../../static/img/same2.jpg"},
+        {"url": "../../../static/img/same3.jpg"},
+        {"url": "../../../static/img/train1.jpg"},
+        {"url": "../../../static/img/train2.jpg"},
+        {"url": "../../../static/img/train3.jpg"}
+    ],
+    "topicList": [
+        {"url": "../../../static/img/same2.jpg", "title": "#21天习惯养成记", "people": 123},
+        {"url": "../../../static/img/same3.jpg", "title": "#秋季脫剽大战", "people": 123},
+        {"url": "../../../static/img/train1.jpg", "title": "#带上咕咚去旅行", "people": 123},
+        {"url": "../../../static/img/train2.jpg", "title": "#跑就对了", "people": 123},
+        {"url": "../../../static/img/train3.jpg", "title": "#带上咕咚去旅行", "people": 123}
+    ],
+    "twentyDays": {
+        "imgUrl": "../../../static/img/21.jpg",
+        "text": "养成一个习惯至少需要21天，每天来咕咚打卡，改变即将到来！",
+        "people": 123344
+    },
+    "weightLose": {
+        "imgUrl": "../../../static/img/weightLose.jpg",
+        "text": "秋季脫剽大战",
+        "people": 34356
+    },
+    "travels": {
+        "imgUrl": "../../../static/img/travel.jpg",
+        "text": "带上咕咚去旅行",
+        "people": 2595534
+    },
+    "runRight": {
+        "imgUrl": "../../../static/img/run.jpg",
+        "text": "跑就对了",
+        "people": 467789
+    } 
 }

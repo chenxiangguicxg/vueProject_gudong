@@ -2,11 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import sports from '../components/sports/sports.vue'
+import topics from '../components/sports/children/topics.vue'
+
 import find from '../components/find/find.vue'
-import sport from '../components/sport/sport.vue'
 import goods from '../components/goods/goods.vue'
 import mine from '../components/mine/mine.vue' 
 
+import sport from '../components/sport/sport.vue'
 import calculateSteps from '../components/sport/children/calculateSteps.vue'
 import sportHistory from '../components/sport/children/sportHistory.vue'
 import goSport from '../components/sport/children/goSport.vue'
@@ -18,9 +20,13 @@ Vue.use(Router)
 export default new Router({
     mode: 'history',
     routes: [{
-        path: 'sports',
+        path: '/sports',
         name: 'sports',
-        component: sports
+        component: sports,
+        children: [{
+            path: 'topics',
+            component: topics
+        }]
     }, {
         path: '/find',
         name: 'find',
