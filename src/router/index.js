@@ -3,10 +3,16 @@ import Router from 'vue-router'
 
 import sports from '../components/sports/sports.vue'
 import topics from '../components/sports/children/topics.vue'
+import more from '../components/sports/children/more.vue'
+import equipment from '../components/sports/children/equipment.vue'
 
 import find from '../components/find/find.vue'
 import goods from '../components/goods/goods.vue'
+
 import mine from '../components/mine/mine.vue' 
+import concern from '../components/mine/children/concern.vue' 
+import fans from '../components/mine/children/fans.vue' 
+import dynamic from '../components/mine/children/dynamic.vue' 
 
 import sport from '../components/sport/sport.vue'
 import calculateSteps from '../components/sport/children/calculateSteps.vue'
@@ -26,6 +32,14 @@ export default new Router({
         children: [{
             path: 'topics',
             component: topics
+        },
+        {
+            path: 'more',
+            component: more
+        },
+        {
+            path: 'equipment',
+            component: equipment
         }]
     }, {
         path: '/find',
@@ -55,7 +69,17 @@ export default new Router({
     }, {
         path: '/mine',
         name: 'mine',
-        component: mine
+        component: mine,
+        children: [{
+            path: 'concern',
+            component: concern
+        },{
+            path: 'fans',
+            component: fans
+        },{
+            path: 'dynamic',
+            component: dynamic
+        }]
     }, {
         path: '*',
         redirect: '/sport'

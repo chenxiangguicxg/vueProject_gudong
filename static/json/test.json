@@ -118,5 +118,54 @@
         "imgUrl": "../../../static/img/run.jpg",
         "text": "跑就对了",
         "people": 467789
-    } 
+    },
+    "dailyItem": {
+        "url": "../../../static/img/daily.jpg",
+        "title": "#健身日志",
+        "text": "想知道自己能坚持多久吗？来打卡吧，撰写属于你的健身日志~",
+        "iconUrl1": "../../../static/img/daily_icon.jpg",
+        "iconUrl2": "../../../static/img/daily_icon.jpg",
+        "iconUrl3": "../../../static/img/daily_icon.jpg",
+        "people": 457832
+    },
+    "wisdomItem": {
+        "url": "../../../static/img/wisdom.jpg",
+        "title": "#我的“智”运动",
+        "text": "晒出你的咕咚智能运动范儿",
+        "iconUrl1": "../../../static/img/wisdom_icon.jpg",
+        "iconUrl2": "../../../static/img/wisdom_icon.jpg",
+        "iconUrl3": "../../../static/img/wisdom_icon.jpg",
+        "people": 457832
+    },
+    "hotActivity": {
+        "url": "../../../static/img/hot_activity.jpg",
+        "title": "营养配件分会场"
+    },
+    "equipment": {
+        "url": "../../../static/img/intelligence_equipment.jpg",
+        "title": "智能装备"
+    },
+    "user": {
+        "portrait": "../../../static/img/daily_icon.jpg",
+        "rank": "../../../static/img/run_rank.jpg",
+        "userName": "用户名"
+    },
+    "mineSport": { 
+        "times": "8",
+        "miles": "88"
+    },
+    "mineList": [
+        {"path": "grade", "icon": "grade", "name": "成绩"},
+        {"path": "medal", "icon": "medal", "name": "奖章"},
+        {"path": "rank", "icon": "rank", "name": "排行"},
+        {"path": "trainPlan", "icon": "trainPlan", "name": "训练计划"},
+        {"path": "collection", "icon": "collection", "name": "收藏"},
+        {"path": "sportTeam", "icon": "sportTeam", "name": "运动团"},
+        {"path": "matches", "icon": "matches", "name": "赛事"},
+        {"path": "equipment", "icon": "equipment", "name": "装备"},
+        {"path": "order", "icon": "order", "name": "订单"},
+        {"path": "packet", "icon": "packet", "name": "钱包"},
+        {"path": "club", "icon": "club", "name": "俱乐部"},
+        {"path": "setting", "icon": "setting", "name": "设置"}
+    ]
 }

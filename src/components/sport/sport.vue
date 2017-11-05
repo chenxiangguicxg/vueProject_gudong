@@ -76,11 +76,8 @@
     }
 </script>
 
-<style type="text/css">
-    html, body, #sport, #app {
-        height: 100%;
-        background-color: #fff;
-    }
+<style type="text/css" scoped>
+
     /*运动头部样式*/
     .s-head {
         position: relative;
