@@ -1,9 +1,9 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1509874747154'); /* IE9*/
-  src: url('iconfont.eot?t=1509874747154#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.ttf?t=1509874747154') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1509874747154#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1512134305459'); /* IE9*/
+  src: url('iconfont.eot?t=1512134305459#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.ttf?t=1512134305459') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1512134305459#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -28,9 +28,15 @@
 
 .icon-matches:before { content: "\e606"; }
 
+.icon-plus:before { content: "\e658"; }
+
 .icon-search:before { content: "\e63e"; }
 
 .icon-closebtn:before { content: "\e6c0"; }
+
+.icon-video:before { content: "\e652"; }
+
+.icon-play:before { content: "\e63c"; }
 
 .icon-medal:before { content: "\e6ad"; }
 
@@ -54,6 +60,10 @@
 
 .icon-bean:before { content: "\e60c"; }
 
+.icon-share:before { content: "\e734"; }
+
+.icon-face:before { content: "\e612"; }
+
 .icon-chat:before { content: "\e643"; }
 
 .icon-sport:before { content: "\e68d"; }
@@ -74,6 +84,8 @@
 
 .icon-history_run:before { content: "\e602"; }
 
+.icon-image:before { content: "\e61f"; }
+
 .icon-code:before { content: "\e603"; }
 
 .icon-sportTeam:before { content: "\e73c"; }
@@ -81,6 +93,8 @@
 .icon-find:before { content: "\e600"; }
 
 .icon-RMB:before { content: "\e671"; }
+
+.icon-live:before { content: "\e613"; }
 
 .icon-logo:before { content: "\e7e0"; }
 

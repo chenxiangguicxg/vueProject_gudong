@@ -6,7 +6,7 @@
     }, 
     "sport_walk": {
         "sportMiles": "0", 
-        "sportType": "健走总公里",  
+        "sportType": "健走总公里", 
         "sportRecommend": "快来看看你的跑姿得几分"
     }, 
     "sport_cycle": {
@@ -84,88 +84,348 @@
                 "recommendShow": true
             }
         ]
-    ],
+    ], 
     "sportsCarouelImages": [
-        {"url": "../../../static/img/same2.jpg"},
-        {"url": "../../../static/img/same3.jpg"},
-        {"url": "../../../static/img/train1.jpg"},
-        {"url": "../../../static/img/train2.jpg"},
-        {"url": "../../../static/img/train3.jpg"}
-    ],
+        {
+            "url": "../../../static/img/same2.jpg"
+        }, 
+        {
+            "url": "../../../static/img/same3.jpg"
+        }, 
+        {
+            "url": "../../../static/img/train1.jpg"
+        }, 
+        {
+            "url": "../../../static/img/train2.jpg"
+        }, 
+        {
+            "url": "../../../static/img/train3.jpg"
+        }
+    ], 
     "topicList": [
-        {"url": "../../../static/img/same2.jpg", "title": "#21天习惯养成记", "people": 123},
-        {"url": "../../../static/img/same3.jpg", "title": "#秋季脫剽大战", "people": 123},
-        {"url": "../../../static/img/train1.jpg", "title": "#带上咕咚去旅行", "people": 123},
-        {"url": "../../../static/img/train2.jpg", "title": "#跑就对了", "people": 123},
-        {"url": "../../../static/img/train3.jpg", "title": "#带上咕咚去旅行", "people": 123}
-    ],
+        {
+            "url": "../../../static/img/same2.jpg", 
+            "title": "#21天习惯养成记", 
+            "people": 123
+        }, 
+        {
+            "url": "../../../static/img/same3.jpg", 
+            "title": "#秋季脫剽大战", 
+            "people": 123
+        }, 
+        {
+            "url": "../../../static/img/train1.jpg", 
+            "title": "#带上咕咚去旅行", 
+            "people": 123
+        }, 
+        {
+            "url": "../../../static/img/train2.jpg", 
+            "title": "#跑就对了", 
+            "people": 123
+        }, 
+        {
+            "url": "../../../static/img/train3.jpg", 
+            "title": "#带上咕咚去旅行", 
+            "people": 123
+        }
+    ], 
     "twentyDays": {
-        "imgUrl": "../../../static/img/21.jpg",
-        "text": "养成一个习惯至少需要21天，每天来咕咚打卡，改变即将到来！",
+        "imgUrl": "../../../static/img/21.jpg", 
+        "text": "养成一个习惯至少需要21天，每天来咕咚打卡，改变即将到来！", 
         "people": 123344
-    },
+    }, 
     "weightLose": {
-        "imgUrl": "../../../static/img/weightLose.jpg",
-        "text": "秋季脫剽大战",
+        "imgUrl": "../../../static/img/weightLose.jpg", 
+        "text": "秋季脫剽大战", 
         "people": 34356
-    },
+    }, 
     "travels": {
-        "imgUrl": "../../../static/img/travel.jpg",
-        "text": "带上咕咚去旅行",
+        "imgUrl": "../../../static/img/travel.jpg", 
+        "text": "带上咕咚去旅行", 
         "people": 2595534
-    },
+    }, 
     "runRight": {
-        "imgUrl": "../../../static/img/run.jpg",
-        "text": "跑就对了",
+        "imgUrl": "../../../static/img/run.jpg", 
+        "text": "跑就对了", 
         "people": 467789
-    },
+    }, 
     "dailyItem": {
-        "url": "../../../static/img/daily.jpg",
-        "title": "#健身日志",
-        "text": "想知道自己能坚持多久吗？来打卡吧，撰写属于你的健身日志~",
-        "iconUrl1": "../../../static/img/daily_icon.jpg",
-        "iconUrl2": "../../../static/img/daily_icon.jpg",
-        "iconUrl3": "../../../static/img/daily_icon.jpg",
+        "url": "../../../static/img/daily.jpg", 
+        "title": "#健身日志", 
+        "text": "想知道自己能坚持多久吗？来打卡吧，撰写属于你的健身日志~", 
+        "iconUrl1": "../../../static/img/daily_icon.jpg", 
+        "iconUrl2": "../../../static/img/daily_icon.jpg", 
+        "iconUrl3": "../../../static/img/daily_icon.jpg", 
         "people": 457832
-    },
+    }, 
     "wisdomItem": {
-        "url": "../../../static/img/wisdom.jpg",
-        "title": "#我的“智”运动",
-        "text": "晒出你的咕咚智能运动范儿",
-        "iconUrl1": "../../../static/img/wisdom_icon.jpg",
-        "iconUrl2": "../../../static/img/wisdom_icon.jpg",
-        "iconUrl3": "../../../static/img/wisdom_icon.jpg",
+        "url": "../../../static/img/wisdom.jpg", 
+        "title": "#我的“智”运动", 
+        "text": "晒出你的咕咚智能运动范儿", 
+        "iconUrl1": "../../../static/img/wisdom_icon.jpg", 
+        "iconUrl2": "../../../static/img/wisdom_icon.jpg", 
+        "iconUrl3": "../../../static/img/wisdom_icon.jpg", 
         "people": 457832
-    },
+    }, 
     "hotActivity": {
-        "url": "../../../static/img/hot_activity.jpg",
+        "url": "../../../static/img/hot_activity.jpg", 
         "title": "营养配件分会场"
-    },
+    }, 
     "equipment": {
-        "url": "../../../static/img/intelligence_equipment.jpg",
+        "url": "../../../static/img/intelligence_equipment.jpg", 
         "title": "智能装备"
-    },
+    }, 
     "user": {
-        "portrait": "../../../static/img/daily_icon.jpg",
-        "rank": "../../../static/img/run_rank.jpg",
+        "portrait": "../../../static/img/daily_icon.jpg", 
+        "rank": "../../../static/img/run_rank.jpg", 
         "userName": "用户名"
-    },
-    "mineSport": { 
-        "times": "8",
+    }, 
+    "mineSport": {
+        "times": "8", 
         "miles": "88"
-    },
+    }, 
     "mineList": [
-        {"path": "grade", "icon": "grade", "name": "成绩"},
-        {"path": "medal", "icon": "medal", "name": "奖章"},
-        {"path": "rank", "icon": "rank", "name": "排行"},
-        {"path": "trainPlan", "icon": "trainPlan", "name": "训练计划"},
-        {"path": "collection", "icon": "collection", "name": "收藏"},
-        {"path": "sportTeam", "icon": "sportTeam", "name": "运动团"},
-        {"path": "matches", "icon": "matches", "name": "赛事"},
-        {"path": "equipment", "icon": "equipment", "name": "装备"},
-        {"path": "order", "icon": "order", "name": "订单"},
-        {"path": "packet", "icon": "packet", "name": "钱包"},
-        {"path": "club", "icon": "club", "name": "俱乐部"},
-        {"path": "setting", "icon": "setting", "name": "设置"}
+        {
+            "path": "/mine/grade", 
+            "icon": "grade", 
+            "name": "成绩"
+        }, 
+        {
+            "path": "/mine/medal", 
+            "icon": "medal", 
+            "name": "奖章"
+        }, 
+        {
+            "path": "/mine/rank", 
+            "icon": "rank", 
+            "name": "排行"
+        }, 
+        {
+            "path": "/mine/trainPlan", 
+            "icon": "trainPlan", 
+            "name": "训练计划"
+        }, 
+        {
+            "path": "/mine/collection", 
+            "icon": "collection", 
+            "name": "收藏"
+        }, 
+        {
+            "path": "/mine/sportTeam", 
+            "icon": "sportTeam", 
+            "name": "运动团"
+        }, 
+        {
+            "path": "/mine/matches", 
+            "icon": "matches", 
+            "name": "赛事"
+        }, 
+        {
+            "path": "/mine/equipment", 
+            "icon": "equipment", 
+            "name": "装备"
+        }, 
+        {
+            "path": "/mine/order", 
+            "icon": "order", 
+            "name": "订单"
+        }, 
+        {
+            "path": "/mine/packet", 
+            "icon": "packet", 
+            "name": "钱包"
+        }, 
+        {
+            "path": "/mine/club", 
+            "icon": "club", 
+            "name": "俱乐部"
+        }, 
+        {
+            "path": "/mine/setting", 
+            "icon": "setting", 
+            "name": "设置"
+        }
+    ], 
+    "findList": [
+        {
+            "path": "/find/storeFind", 
+            "subtitle": "运动商城", 
+            "subtext": "买运动装备128元免费领", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }, 
+        {
+            "path": "/find/sportFind", 
+            "subtitle": "运动", 
+            "subtext": "赚福利，月伙伴，PK战", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }, 
+        {
+            "path": "/find/matches", 
+            "subtitle": "赛事", 
+            "subtext": "赛事由你主宰，荣誉等你来战", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }, 
+        {
+            "path": "/find/team", 
+            "subtitle": "运动团", 
+            "subtext": "加入运动团，安全有趣不孤单", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }, 
+        {
+            "path": "/find/playground", 
+            "subtitle": "跑场", 
+            "subtext": "发现附近最佳运动场所", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }, 
+        {
+            "path": "/find/gudonggo", 
+            "subtitle": "咕咚GO", 
+            "subtext": "与好友一起环游世界", 
+            "imgUrl": "../../../static/img/hot_activity.jpg"
+        }
+    ], 
+    "rcmdList": [
+        {
+            "url": "wisdom_icon.jpg", 
+            "name": "跑者熊熊", 
+            "description1": "跑步达人", 
+            "description2": "用双腿去旅行"
+        },
+        {
+            "url": "wisdom_icon.jpg", 
+            "name": "咕咚直播", 
+            "description1": "运动网红袖长", 
+            "description2": "直播课程"
+        },
+        {
+            "url": "wisdom_icon.jpg", 
+            "name": "小小画个圈", 
+            "description1": "跑步达人", 
+            "description2": "用双腿去旅行"
+        },
+        {
+            "url": "wisdom_icon.jpg", 
+            "name": "刘菲菲", 
+            "description1": "跑步达人", 
+            "description2": "用双腿去旅行"
+        }
+    ], 
+    "videoList": [
+        {
+            "url": "hot_activity.jpg", 
+            "txt": "分享给你三个很棒的练腿动作"
+        },
+        {
+            "url": "mls3.jpg", 
+            "txt": "有时候倒着看这个世界有着别样的感觉"
+        },
+        {
+            "url": "same1.jpg", 
+            "txt": "没有强大的核心肌群的支撑就没有轻松自如的动作"
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "txt": "下着雪滑雪带劲儿"
+        }
+    ], 
+    "dynamicList": [
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "分享给你三个很棒的练腿动作",
+            "name": "帅辉辉",
+            "zan": 22
+        },
+        {
+            "url": "hot_activity.jpg", 
+            "url2": "wisdom_icon.jpg", 
+            "txt": "跑拍#运动，听我的",
+            "name": "二丫头",
+            "zan": 244
+        }
     ]
 }

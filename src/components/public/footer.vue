@@ -35,3 +35,14 @@
         }
     }
 </script>
+
+<style type="text/css" lang="scss">
+    @import '../../assets/css/mixin.scss';
+    #foot-nav {
+        @include prefixer(box-shadow, 0 2px 5px 8px #fff, webkit moz o ms);
+        &:before {
+            @include bottomBorder;
+            @include leftUpCorner(0, 0);
+        }
+    }
+</style>

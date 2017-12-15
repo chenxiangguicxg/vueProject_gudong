@@ -6,9 +6,7 @@ import actions from './action'
 Vue.use(Vuex)
 
 const state = {
-    sportMiles: 233,
-    sportType: '健走',
-    sportRecommend: '菜鸟',
+    isOpen: false
 }
 
 export default new Vuex.Store({

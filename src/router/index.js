@@ -5,8 +5,17 @@ import sports from '../components/sports/sports.vue'
 import topics from '../components/sports/children/topics.vue'
 import more from '../components/sports/children/more.vue'
 import equipment from '../components/sports/children/equipment.vue'
+import detail from '../components/sports/children/detail.vue'
 
 import find from '../components/find/find.vue'
+import storeFind from '../components/find/children/storeFind.vue'
+import sportFind from '../components/find/children/sportFind.vue'
+import matches from '../components/find/children/matches.vue'
+import team from '../components/find/children/team.vue'
+import playground from '../components/find/children/playground.vue'
+import gudonggo from '../components/find/children/gudonggo.vue'
+
+
 import goods from '../components/goods/goods.vue'
 
 import mine from '../components/mine/mine.vue' 
@@ -40,11 +49,34 @@ export default new Router({
         {
             path: 'equipment',
             component: equipment
+        },
+        {
+            path: 'detail',
+            component: detail
         }]
     }, {
         path: '/find',
         name: 'find',
-        component: find
+        component: find,
+        children: [{
+            path: 'storeFind',
+            component: storeFind
+        },{
+            path: 'sportFind',
+            component: sportFind
+        },{
+            path: 'matches',
+            component: matches
+        },{
+            path: 'team',
+            component: team
+        },{
+            path: 'playground',
+            component: playground
+        },{
+            path: 'gudonggo',
+            component: gudonggo
+        }]
     }, {
         path: '/sport',
         name: 'sport',

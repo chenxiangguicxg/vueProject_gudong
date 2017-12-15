@@ -2,8 +2,15 @@
 * @Author: cxg
 * @Date:   2017-05-09 14:26:14
 * @Last Modified by:   cxg
-* @Last Modified time: 2017-11-04 21:23:16
+* @Last Modified time: 2017-11-30 21:04:10
 */  
+html, body {
+    box-sizing: border-box;
+    padding-bottom: 54px;
+}
+*:before,*:after {
+    box-sizing: inherit;
+}
 #app {
     padding: 0 10px;
 }
@@ -11,10 +18,10 @@
     position: fixed;
     left: 0;
     bottom: 0; 
+    z-index: 4;
     width: 100%;
     height: 50px;
-    background: #fff;
-    border-top: 1px solid #ccc;
+    background: #fff; 
 }
 .foot-nav {
     width: 100%;

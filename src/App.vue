@@ -1,5 +1,5 @@
 <template>
-<div id="app">  
+<div id="app" style="height: 100%">  
     <transition enter-active-class="animated bounceInLeft" leave-active-class="animated bounceOutRight">
     <router-view></router-view>
     </transition>

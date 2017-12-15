@@ -1,269 +1,203 @@
-<template>  
-  <div id="sports">  
-    <searchInput></searchInput>
-    <div class="nav">  
-      <mt-button size="small" @click.native.prevent="active = 'tab-container1'">热门</mt-button>  
-      <mt-button size="small" @click.native.prevent="active = 'tab-container2'">关注</mt-button>  
-      <mt-button size="small" @click.native.prevent="active = 'tab-container3'">直播</mt-button>  
-    </div>  
-      
-    <div class="page-tab-container">  
-        <mt-tab-container class="page-tabbar-tab-container" v-model="active" swipeable>  
-            <mt-tab-container-item id="tab-container1">  
-                <carousel></carousel>
+<template>
+    <div id="sports">
+        <div class="sports-head">
+            <searchInput></searchInput>
+            <div class="nav">
+                <a href="javascript: void(0)" v-for="(sportsItem, sportsTabIndex) in sportsTabList" @click="activeContainer = 'tab-container' + sportsTabIndex" :class="{'active': activeContainer == 'tab-container' + sportsTabIndex }">{{ sportsItem.select }}</a>
+            </div>
+        </div>
 
-                <div class="hot-topic">
-                    <div class="p-head">热门话题<em @click="transferTo('/sports/more', '')">更多 > </em></div>
-                    <div class="topic-list" id="topic-touch">
-                        <router-link :to="{path:'/sports/topics', query: {id:topicItem.title}}" v-for="topicItem in topicList" :style="{ backgroundImage: 'url(' + topicItem.url + ')' }">
-                            <h3 :topic-title="topicItem.title">{{ topicItem.title }}</h3>
-                            <p>{{ topicItem.people }}万人参与</p>
-                        </router-link>
-                    </div> 
-                    <router-link class="fit-daily" :to="{path:'/sports/topics', query: {id:dailyItem.title}}">
-                        <div class="daily-left" :style="{ backgroundImage: 'url(' + dailyItem.url + ')' }"></div>
-                        <div class="daily-right">
-                            <h3>{{ dailyItem.title }}</h3>
-                            <p>{{ dailyItem.text }}</p>
-                            <span>
-                                <img class="daily-img1" :src="dailyItem.iconUrl1" />
-                                <img class="daily-img2" :src="dailyItem.iconUrl2" />
-                                <img class="daily-img3" :src="dailyItem.iconUrl3" />
-                                <span id="daily-people">等{{ dailyItem.people }}万人参加</span>
-                            </span>
-                        </div>
-                    </router-link>
-                    <router-link class="fit-wisdom" :to="{path:'/sports/topics', query: {id:wisdomItem.title}}">
-                        <div class="wisdom-left" :style="{ backgroundImage: 'url(' + wisdomItem.url + ')' }"></div>
-                        <div class="wisdom-right">
-                            <h3>{{ wisdomItem.title }}</h3>
-                            <p>{{ wisdomItem.text }}</p>
-                            <span>
-                                <img class="wisdom-img1" :src="wisdomItem.iconUrl1" />
-                                <img class="wisdom-img2" :src="wisdomItem.iconUrl2" />
-                                <img class="wisdom-img3" :src="wisdomItem.iconUrl3" />
-                                <span id="wisdom-people">等{{ wisdomItem.people }}万人参加</span>
-                            </span>
-                        </div>
-                    </router-link>
-                </div>
+        <div class="page-tab-container">
+            <mt-tab-container class="page-tabbar-tab-container" v-model="activeContainer" swipeable>
+                <mt-tab-container-item id="tab-container0">
+                    <carousel></carousel>
+                    <hotTmp></hotTmp>    
 
-                <div class="hot-activity">
-                    <h2>热门活动</h2>
-                    <div @click="transferTo('/sports/topics', activity.title)" class="activity-go" :style="{backgroundImage: 'url(' + activity.url + ')'}">{{ activity.title }}</div>
-                </div>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="tab-container1">
+                    <!-- cell组件 -->
+                    <mt-cell v-for="n in 5" title="tab-container 2"></mt-cell>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="tab-container2">
+                    <!-- cell组件 -->
+                    <mt-cell v-for="n in 7" title="tab-container 3"></mt-cell>
+                </mt-tab-container-item>
+            </mt-tab-container>
+        </div>
 
-                <div class="discuss-area">
-                    <div class="p-head">讨论专区<em @click="transferTo('/sports/more', '')">更多 > </em></div>
-                    <div @click="transferTo('/sports/equipment', equipment.title)" class="activity-go" :style="{backgroundImage: 'url(' + equipment.url + ')'}">{{ equipment.title }}</div>
-                </div>
-            </mt-tab-container-item>  
-            <mt-tab-container-item id="tab-container2">  
-                <!-- cell组件 -->  
-              <mt-cell v-for="n in 5" title="tab-container 2"></mt-cell>  
-            </mt-tab-container-item>  
-            <mt-tab-container-item id="tab-container3">  
-                <!-- cell组件 -->  
-              <mt-cell v-for="n in 7" title="tab-container 3"></mt-cell>  
-            </mt-tab-container-item>  
-        </mt-tab-container>  
-    </div>  
+        <div class="sports-popup" :class="{popupRotate:classOr}" @click="popupShow()" size="large">
+            <i :class="{popupRotate:classOr}" class="icon-plus iconfont"></i>
+        </div>
 
-    <transition enter-active-class="fadeInRight">
-        <router-view class="sport-show animated" ></router-view>
-    </transition>
-  </div>  
-</template>  
-  
-<script>  
-    import EventUtil from '../../../static/util.js'
-    import searchInput from '../public/search.vue' 
+        <mt-popup v-model="popupVisible" position="bottom" popup-transition="popup-fade" class="mint-popup-4">
+            <ul class="popup-list">
+                <li v-for="popupItem in popupList">
+                    <span>{{ popupItem.type }}</span>
+                    <router-link :to="{path: popupItem.path }"><i :class="['iconfont', 'icon-' + popupItem.icon]"></i></router-link>
+                </li>
+            </ul>
+        </mt-popup>
+
+        <transition enter-active-class="fadeInRight">
+            <router-view class="sport-show animated"></router-view>
+        </transition>
+    </div>
+</template>
+
+<script>   
+import EventUtil from '../../../static/util.js' 
+    import searchInput from '../public/search.vue'
     import carousel from '../public/carousel.vue'
-    export default {  
-        name: 'page-tab-container',  
-        data() {  
-            return {  
-              active: 'tab-container1',
-              topicTitle: [''],
-              topicList: '',
-              dailyItem: '',
-              wisdomItem: '',
-              activity: '',
-              equipment: '',
-            };  
+    import hotTmp from './children/hotTmp.vue'
+    import { Popup } from 'mint-ui'
+    export default {
+        name: 'sports',
+        data() {
+            return {
+                activeContainer: 'tab-container0',
+                sportsTabList: [
+                    {select: '热门'},
+                    {select: '关注'},
+                    {select: '直播'}
+                ],
+                popupVisible: false, 
+                classOr: false, 
+                popupList: [
+                    {type: '发图片', path: '/sports/topics', icon: 'image'},
+                    {type: '发视频', path: '/sports/topics', icon: 'video'},
+                    {type: '开直播', path: '/sports/topics', icon: 'live'}
+                ]
+            };
         },
         components: {
             searchInput,
-            carousel
-        }, 
+            carousel,
+            hotTmp,
+            Popup
+        },
         methods: {
-            transferTo: function(path, query) {
-                this.$router.push({ path: path, query: {id: query}})
+            popupShow: function() { 
+                this.popupVisible = true
+                this.classOr = true 
             }
         },
         mounted: function() {
-            let axios = require('axios')
-            axios.get('static/json/test.json')
-            .then((res) => {
-                this.topicTitle = res.data.topicList;
-                this.topicList = res.data.topicList;
-                this.dailyItem = res.data.dailyItem;
-                this.wisdomItem = res.data.wisdomItem;
-                this.activity = res.data.hotActivity;
-                this.equipment = res.data.equipment;
-            })
-            .catch((res) => {
-                console.log(error)
-            });
-
-            let topicTouch = document.getElementById('topic-touch');
-            EventUtil.addHandler(topicTouch, "touchmove", function(event) {
-              event = EventUtil.getEvent(event);
-              EventUtil.stopPropagation(event);
-            });
-        }  
+                // console.log(this.$el.children[4].className)
+            // EventUtil.addHandler(moduleElm, "click", function (event) {
+            //     this.popupVisible = false
+            //     this.classOr = false
+            // })
+        }
     };  
-</script>  
-  
-<style scoped>      
-    #sports {
-        width: 100%;
-        height: 100%;
-    }
-    .mint-swipe {
-        height: 120px;
-    }
-    .mint-tab-container {
-        overflow: visible;
-    }
-    .p-head {
-        height: 40px;
-        width: 100%;
-        font-size: 14px;
-        line-height: 40px;
-        text-align: left; 
-    }
-    .p-head em {
-        position: absolute;
-        right: 10px;
-        color: #ccc;
-        font-size: 14px;
-        text-align: center;
+</script>
+
+<style lang="scss">
+    @import '../../assets/css/mixin.scss';
+
+    .animated {
+        @include leftUpCorner(0, 0);
+        @include wh(100%, 100%);
+        z-index: 666;
+        background-color: #fff;
     }
 
-    .topic-list { 
-        display: -webkit-box;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling:touch;
-    }
-    .topic-list a {
-        display: block;
-        margin-right: 10px;
-        width: 120px;
-        height: 80px;
-        border-radius: 8px;
-    }  
-    .topic-list a h3, .topic-list a p {
-        margin-top: 16px;
-        font-size: 12px;
-        line-height: 24px;
-        color: #fff;
-        text-align: center;
-    } 
-    .topic-list a p {
-        margin-top: 0;
+    .popupRotate {
+        @include prefixer(transform, rotate(45deg), webkit moz o ms);
+        @include prefixer(transition-duration, 500ms, webkit moz o ms);
     }
 
-    .item {  
-        display: inline-block;  
-    }  
-  
-    .nav {  
-        padding: 10px;  
-    }  
-      
-    .link {  
-        color: inherit;  
-        padding: 20px;  
-        display: block;  
-    }  
-    
-    .fit-daily, .fit-wisdom {
-        display: block;
-        margin-top: 10px;
+    .sports-head {
         width: 100%;
-        height:100px;
-    }
-    .daily-left, .wisdom-left {
-        float: left;
-        display: block;
-        margin-right: 15px;
-        width: 100px;
-        height: 100px;
-        background-size: 100% 100%;
-        border-radius: 6px;
-    }
-    .daily-right, .wisdom-right {
-        float: left;
-        height: 100px;
-        width: calc(100% - 135px);
-    }
-    .daily-right h3, .wisdom-right h3 {
-        color: #111;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: bold;
-    }
-    .daily-right p, .wisdom-right p {
-        margin: 6px 0;
-        height: 32px;
-        color: #666;
-        font-size: 12px;
-        line-height: 16px;
-    }
-    .daily-right span, .wisdom-right span {
-        position: relative;
-        width: 100%;
-        display: block;
-    }
-    .daily-right span img, .wisdom-right span img {
-        position: absolute;
-        left: 0;
+        position: fixed;
         top: 0;
-        display: block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-    }
-    .daily-right span .daily-img2, .wisdom-right span .wisdom-img2 {
-        left: 20px;
-    }
-    .daily-right span .daily-img3, .wisdom-right span .wisdom-img3 {
-        left: 40px;
-    }
-    .daily-right span #daily-people, .wisdom-right span #wisdom-people {
-        display: block;
-        position: absolute;
-        left: 80px; 
-        font-size: 14px;
-        line-height: 30px;
+        left: 10px;
+        z-index: 555;
+        background-color: #fff;
+        .nav {
+            margin: 10px 0;
+            position: relative;
+            @include prefixer(box-shadow, 0 25px 10px -10px #fff, webkit moz o ms);
+            &:before {
+                content: '';
+                background-color: #ccc;
+                @include leftDownCorner(0, 0);
+                @include wh(100%, 1px);
+                @include prefixer(transform, scaleY(0.2), webkit moz o ms);
+            }
+            a {
+                display: inline-block;
+                padding: 5px 10px;
+            }
+            .active {
+                color: #1ab567;
+                border-bottom: 2px solid #1ab567;
+            }
+        }
     }
 
-    .hot-activity {
-        margin-top: 10px;
-        height: 100px;
-        width: 100%;
+    .sports-popup {
+        @include wh(3rem, 3rem);
+        @include rightDownCorner(5rem, 1rem);
+        @include prefixer(border-radius, 50%, webkit moz o ms);
+        position: fixed;
+        z-index: 5;
+        text-align: center;
+        background-color: #00BC70;
+        line-height: 3rem;
+        @include fsc(1.3rem, #fff);
     }
-    .hot-activity h2 {
-        font-size: 14px;
-        line-height: 20px;
+    .mint-popup-bottom {
+        top: auto;
+        right: -2.5rem;
+        bottom: 8rem;
+        left: auto;
+        @include prefixer(transform, translate3d(-50%, 0, 0), webkit moz o ms); 
+        background-color: transparent;
+        .popup-list {
+            @include wh(100%, 100%);
+            li {
+                @include wh(100%, 4rem);
+                span { 
+                    line-height: 3rem;
+                    padding-left: 10px;
+                    @include fsc(1rem, #111);
+                }
+                a {
+                    display: inline-block;
+                    @include wh(3rem, 3rem);
+                    @include prefixer(border-radius, 50%, webkit moz o ms);
+                    background-color: #00BC70;
+                    text-align: center;
+                    line-height: 3rem;
+                    .iconfont {
+                        @include fsc(1.2rem, #fff);
+                    }
+                }
+            }
+        }
     }
-    .hot-activity .activity-go {
-        height: 80px;
-        width: 100%;
-        font-size: 20px;
-        color: #fff;
-        line-height: 80px;
-        background-size: 100% 100%;
-    }
-</style>  
+
+    #sports {
+        padding-top: 94px;
+        @include wh(100%, 100%);
+        .v-modal {
+            background-color: #fff;
+            opacity: 0.8;
+        }
+        .page-tab-container {
+            height: 100%;
+            .page-tabbar-tab-container {
+                height: 100%;
+                .mint-tab-container-wrap {
+                    height: 100%;
+                    .mint-tab-container-item {
+                        height: 100%; 
+                        .mint-swipe {
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+</style>

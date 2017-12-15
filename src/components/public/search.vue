@@ -6,11 +6,6 @@
         </router-link>
         <i class="icon-code iconfont"></i>
     </div> 
-<!--     <transition enter-active-class="fadeIn">
-        <div v-show="" class="animated sportSlide" id="">
-            
-        </div>
-    </transition> -->
 </template>
 
 <script>
@@ -24,37 +19,38 @@
     }
 </script>
 
-<style type="text/css" scoped>
+<style type="text/css" lang="scss" scoped>
+    @import '../../assets/css/mixin.scss'; 
     #searchIput {
-        height: 40px;
-    } 
-    .search {
-        display: block;
-        padding: 5px 5%;
-        width: 80%;
-        float: left;
-        font-size: 1rem;
-        left: 120px;
-    }
-    .search input {
-        padding-left: 10%;
-        width: 90%;
-        height: 30px;
-        outline: none;
-        background-color: rgba(221, 221, 221, 0.37);
-        border: none;
-        border-radius: 4px;
-    }
-    .search .icon-search {
-        position: absolute;
-        top: 8px;
-        left: 6%;
-        color: #ccc;
-    }
-    .icon-code {
-        float: right;
-        width: 10%;
-        text-align: left;
-        margin-top: 8px;
-    }
+        position: relative;
+        @include wh(97%, 2.5rem); 
+        .search {
+            display: block;
+            position: absolute;
+            left: 5%;
+            top: 5px;
+            @include wh(80%, 100%);
+            float: left; 
+            input {
+                padding-left: 10%;
+                outline: none;
+                background-color: rgba(221, 221, 221, 0.37);
+                border: none;
+                @include wh(90%, 2rem); 
+                @include prefixer(border-radius, 0.25rem, webkit moz o ms); 
+            }
+            .icon-search {
+                position: absolute;
+                top: 4px; 
+                color: #ccc;
+            }
+        }
+        .icon-code {
+            float: right;
+            width: 2rem;
+            text-align: left;
+            margin-top: 8px;
+        }
+    }  
+    
 </style>

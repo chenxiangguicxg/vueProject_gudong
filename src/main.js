@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import store from './store/store'
 
+//国际化使用规则
+import VueI18n from 'vue-i18n'
+Vue.use(VueI18n)
+
 Vue.config.productionTip = false
 
 import Element from 'element-ui'
@@ -16,6 +20,10 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
 import echarts from 'echarts' 
+
+// 点击延迟
+const FastClick = require('fastclick')
+FastClick.attach(document.body)
 
 // 请求数据用
 import axios from 'axios'

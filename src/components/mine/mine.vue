@@ -26,7 +26,7 @@
         
         <ul class="mine-list">
             <li v-for="mineItem in mineList">
-                <router-link :to="{path: '/mine/mineItem.path'}">
+                <router-link :to="{path: mineItem.path}">
                     <i :class="['iconfont', 'icon-' + mineItem.icon]"></i>
                     <span class="mine-name">{{ mineItem.name }}</span>
                     <i class="iconfont icon-arrow-right"></i>

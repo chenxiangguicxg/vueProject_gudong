@@ -7,7 +7,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = {
+let webpackConfig = {
   entry: {
     app: './src/main.js'
   },
@@ -56,7 +56,18 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
+      },
+      {
+        test: /\.less$/,
+        loader: ["style", "css", "less"]
       }
     ]
   }
 }
+
+// 将vux-ui 合并到配置中
+const vuxLoader = require('vux-loader') 
+module.exports = vuxLoader.merge(webpackConfig, {
+  options: {},
+  plugins: ['vux-ui']
+})

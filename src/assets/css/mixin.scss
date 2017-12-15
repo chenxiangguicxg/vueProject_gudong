@@ -1,0 +1,137 @@
+// 此处写公共的css公因子
+$border: 1px solid #ccc;
+$bsize: 100% 100%;
+
+// 自动给浏览器添加前缀，默认将输出webkit前缀，moz前缀和标准
+@mixin prefixer($property, $value, $prefixes: webkit moz) {
+  #{$property}: $value;
+
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}:#{$value};
+    }
+    @else if $prefix == moz {
+      -moz-#{$property}:#{$value};
+    }
+    @else if $prefix == o {
+      -o-#{$property}:#{$value};
+    }
+    @else if $prefix == ms {
+      -ms-#{$property}:#{$value};
+    }
+  }
+}
+
+// 背景图片地址和大小
+@mixin backgroundImage($url) { 
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+//定位右上角
+@mixin rightUpCorner($top, $right) {
+  position:absolute;
+  top: $top;
+  right: $right;
+}
+
+//定位右下角
+@mixin rightDownCorner($bottom, $right) {
+  position:absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+//定位左上角
+@mixin leftUpCorner($top, $left) {
+  position:absolute;
+  top: $top;
+  left: $left;
+}
+
+//定位左下角
+@mixin leftDownCorner($bottom, $left) {
+  position:absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+//定位上下左右居中
+@mixin center {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位垂直居中
+@mixin verticalCenter {  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位水平居中
+@mixin horizonCenter {  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//设置元素宽高
+@mixin wh($width, $height){
+  width: $width;
+  height: $height;
+}
+
+//设置字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
+  font: #{$size}/#{$line-height} $family;
+}
+
+//设置字体大小，颜色
+@mixin fsc($size, $color){
+  font-size: $size;
+  color: $color;
+}
+
+// 小于1px下划线设置
+@mixin bottomBorder {
+  content: '';
+  background-color: #ccc;
+  @include leftDownCorner(0, 0);
+  @include wh(100%, 1px); 
+  @include prefixer(transform, scaleY(0.2), webkit moz o ms);
+}
+
+// 右侧小于1px border
+@mixin rightBorder {
+  content: '';
+  background-color: #ccc;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  @include wh(1px, 100%); 
+  @include prefixer(transform, scaleY(0.2), webkit moz o ms);
+}
+
+// 水平滑块设置，这里需要阻止触摸事件冒泡
+@mixin scrollHorizontal {
+  display: -webkit-box;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+// 清浮动
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    *height: 1%;
+}
